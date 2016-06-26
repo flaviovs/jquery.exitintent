@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>jQuery Exit Intent Plugin</title>
+	<script src="https://code.jquery.com/jquery-1.4.min.js"></script>
+	<script src="jquery.exitintent.js"></script>
+	<script>
+	$(function() {
+		$.exitIntent('enable');
+		$(document).bind('exitintent', function() {
+			$("#warning").slideDown();
+		});
+		$("#warning a").bind('click', function() {
+			$("#warning").slideUp();
+			return false;
+		});
+	});
+    	</script>
+	<style>
+		#ask,#warning {
+			margin: 2em auto;
+			width: 50%;
+			font-size: large;
+			padding: 2em;
+			text-align: center;
+		}
+		#ask {
+			background-color: yellow;
+		}
+		#warning {
+			display: none;
+			background-color: #faa;
+		}
+	</style>
+	</head>
+<body>
+	<div id="ask">
+		<p>Please don't leave this page</p>
+		<p>For more details, check the <a href="https://github.com/flaviovs/jquery.exitintent">jQuery Exit Intent Plugin</a> page.</p>
+	</div>
+	<div id="warning">
+		<p>I said <b>don't leave this page!</b></p>
+		<p><a href="#">Got it!</a></p>
+	</div>
+</body>
+</html>
