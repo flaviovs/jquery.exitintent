@@ -10,7 +10,7 @@
 			clearTimeout(timer);
 		}
 
-		if ($.exitIntent.settings.sensivity <= 0) {
+		if ($.exitIntent.settings.sensitivity <= 0) {
 			$.event.trigger('exitintent');
 			return;
 		}
@@ -19,7 +19,7 @@
 			function() {
 				timer = null;
 				$.event.trigger('exitintent');
-			}, $.exitIntent.settings.sensivity);
+			}, $.exitIntent.settings.sensitivity);
 	}
 
 	function trackEnter() {
@@ -45,7 +45,7 @@
 	}
 
 	$.exitIntent.settings = {
-		'sensivity': 300
+		'sensitivity': 300
 	};
 
 })(jQuery);
