@@ -3,9 +3,9 @@ jQuery Exit Intent Plugin
 
 The jQuery Exit Intent plugin try to anticipate when the user is about
 to leave the current page, and fire an event when it thinks they are
-doing so. You can react to this event to display modal dialogs, change
-page text, etc., to try to grab user's attention and (hopefully) made
-them change their minds.
+doing so. You can react to this event to display modal dialogues,
+change page text, etc., to try to grab user's attention and
+(hopefully) made them change their minds.
 
 
 Requirements
@@ -27,7 +27,7 @@ Installation
 
 3. Enable the plugin in your site:
 
-    $.exitIntent('enable');
+        $.exitIntent('enable');
 
 4. Listen to the `exitintent` event, and act accordingly:
 
@@ -52,7 +52,11 @@ page?
 
 Legal
 -----
-Copyright (C) 2016 Flavio Veloso
+Copyright (C) 2016 Flávio Veloso
 
 This plugin is released under the terms of the MIT license. See the
 LICENSE file for more details.
+
+If you think you found a bug in this plugin, please visit
+https://github.com/flaviovs/jquery.exitintent/issues and open a new
+issue.
