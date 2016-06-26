@@ -10,6 +10,11 @@
 			clearTimeout(timer);
 		}
 
+		if ($.exitIntent.settings.sensivity <= 0) {
+			$.event.trigger('exitintent');
+			return;
+		}
+
 		timer = setTimeout(
 			function() {
 				timer = null;
