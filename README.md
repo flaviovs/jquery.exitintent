@@ -31,10 +31,37 @@ Installation
 
 4. Listen to the `exitintent` event, and act accordingly:
 
-        $(document).on('exitintent',
+        $(document).bind('exitintent',
             function() {
                 console.log('Oops... trying to leave the page');
             });
+
+
+Reference
+---------
+
+1. Enable the plugin:
+
+        $.exitIntent('enable')
+
+2. Disable the plugin:
+
+        $.exitIntent('disable')
+
+3. Use customized settings when enabling:
+
+        $.exitIntent('disable', { 'sensitivity': 100 })
+
+
+### Settings
+
+The second parameter to the `$.exitIntent` plugin call can contain a
+settings object. The following settings are recognized:
+
+- `sensitivity` - adjust the sensitivity to detect when the user is
+  about to exit. In practical terms, this is the time (in
+  milliseconds) the user is allowed to "exit" your page, but come back
+  without triggering the `exitintent`. Default: 300.
 
 
 FAQ
@@ -48,6 +75,27 @@ page?
    define *what* you want to do when the user is leaving. For example,
    if you want to display a modal dialog, you may use your preferred
    jQuery modal plugin to display the modal.
+
+2. How do I detect an exit intent on my mobile site?
+
+   There are no interesting events in a mobile site that can be used
+   to try detect if the user is going to exit. This may be extremely
+   difficult to implement reliably, if not impossible.
+
+
+Future Improvements
+-------------------
+
+1. Detect when users intend to exit by clicking on an external link
+
+2. Detect when users intend to exit by closing the browser
+   window. This can be done by using some heuristics, for example,
+   when exiting from the bottom of the browser in MS Windows, the
+   browser is close to the bottom of the screen, and not returning
+   after some milliseconds.
+
+Contact me at `flaviovs at magnux dot com` if you'd like to see these
+improvements added to the plugin.
 
 
 Legal
