@@ -4,7 +4,7 @@
     var timer;
 
     function trackLeave(ev) {
-        if (ev.pageY > 0) {
+        if (ev.clientY > 0) {
             return;
         }
 

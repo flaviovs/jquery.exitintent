@@ -17,7 +17,7 @@
 	 });
     	</script>
 	<style>
-	 #ask,#warning {
+	 #ask,#scrolled {
 	     margin: 2em auto;
 	     width: 50%;
 	     font-size: large;
@@ -28,9 +28,19 @@
 	     background-color: yellow;
 	 }
 	 #warning {
+             text-align: center;
 	     display: none;
 	     background-color: #faa;
+             position: fixed;
+             top: 0;
+             right: 0;
+             width: 20%;
+             padding: 0.3em;
 	 }
+         #scrolled {
+             margin-top: 800px;
+             background-color: #ccf;
+         }
 	</style>
     </head>
     <body>
@@ -42,5 +52,8 @@
 	    <p>I said <b>don't leave this page!</b></p>
 	    <p><a href="#">Got it!</a></p>
 	</div>
+        <div id="scrolled">
+            <p>Please don't leave this page, even after scrolling here</p>
+        </div>
     </body>
 </html>
